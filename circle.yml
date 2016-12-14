@@ -20,6 +20,7 @@ dependencies:
 
 test:
   override:
+    # we just validate that the image is runnable
     - docker run -d --name svchealth gaiaadm/gaia-service-health-tests
 
 deployment:
