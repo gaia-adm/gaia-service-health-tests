@@ -13,7 +13,7 @@ func TestServices(t *testing.T) {
 		url  string
 		expectedHttpCode  int
 	}{
-		//{"http://es.skydns.local:9200/_search", 200},
+		{"http://es.skydns.local:9200/_search", 200},
 		{"http://google.com", 200},
 		{"http://facebook.com", 200},
 	}
