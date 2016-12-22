@@ -14,10 +14,10 @@ ADD . /go/src/github.com/gaia-adm/gaia-service-health-tests
 WORKDIR /go/src/github.com/gaia-adm/gaia-service-health-tests
 RUN go get -v github.com/sectioneight/go-junit-report
 
-LABEL tugbot.test=true
-LABEL tugbot.results.dir=/go/src/github.com/gaia-adm/gaia-service-health-tests/junitreports
-LABEL tugbot.event.docker=
-LABEL tugbot.event.docker.filter.type=container
-LABEL tugbot.event.docker.filter.action=start
+LABEL tugbot-test=true
+LABEL tugbot-results-dir=/go/src/github.com/gaia-adm/gaia-service-health-tests/junitreports
+LABEL tugbot-event-docker=
+LABEL tugbot-event-docker-filter-type=container
+LABEL tugbot-event-docker-filter-action=start
 
 CMD mkdir -p junitreports &&  go test -v . | go-junit-report > junitreports/report.xml
